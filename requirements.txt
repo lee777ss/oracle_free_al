@@ -1,0 +1,10 @@
+numpy==2.4.3
+scipy==1.17.1
+pandas==3.0.2
+scikit-learn==1.8.0
+matplotlib==3.10.8
+imbalanced-learn==0.14.2
+psutil==7.2.2
+medmnist==3.0.2
+nbclient==0.10.4
+ipykernel==7.2.0

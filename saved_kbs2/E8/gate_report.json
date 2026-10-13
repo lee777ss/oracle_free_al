@@ -1,0 +1,105 @@
+{
+  "experiment": "E8",
+  "decision": "pass_tolerant",
+  "stopped_early": false,
+  "n_checks": 150,
+  "n_exact": 147,
+  "n_tolerant": 3,
+  "n_failed": 0,
+  "mean_diffs": {
+    "m04_dcgan__R1_confusable": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m05_cgan__R1_confusable": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m06_acgan__R1_confusable": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m07_wgangp__R1_confusable": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 5.551115123125783e-18,
+      "macro_specificity": 0.0
+    },
+    "m08_bagan__R1_confusable": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m04_dcgan__C2_cifar_paper": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m05_cgan__C2_cifar_paper": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m06_acgan__C2_cifar_paper": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m07_wgangp__C2_cifar_paper": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m08_bagan__C2_cifar_paper": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m04_dcgan__S2_stl_mod": {
+      "macro_recall": 2.7755575615628914e-17,
+      "gmean": 3.3306690738754695e-17,
+      "macro_f2": 4.4408920985006264e-17,
+      "macro_specificity": 0.0
+    },
+    "m05_cgan__S2_stl_mod": {
+      "macro_recall": 2.2204460492503132e-17,
+      "gmean": 2.7755575615628914e-17,
+      "macro_f2": 2.7755575615628914e-17,
+      "macro_specificity": 0.0
+    },
+    "m06_acgan__S2_stl_mod": {
+      "macro_recall": 2.7755575615628914e-17,
+      "gmean": 2.2204460492503132e-17,
+      "macro_f2": 3.3306690738754695e-17,
+      "macro_specificity": 0.0
+    },
+    "m07_wgangp__S2_stl_mod": {
+      "macro_recall": 3.3306690738754695e-17,
+      "gmean": 3.8857805861880476e-17,
+      "macro_f2": 3.3306690738754695e-17,
+      "macro_specificity": 0.0
+    },
+    "m08_bagan__S2_stl_mod": {
+      "macro_recall": 2.7755575615628914e-17,
+      "gmean": 3.3306690738754695e-17,
+      "macro_f2": 1.6653345369377347e-17,
+      "macro_specificity": 0.0
+    }
+  },
+  "tolerances": {
+    "per_seed": 0.005,
+    "mean": 0.002
+  }
+}

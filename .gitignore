@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/
+saved_kbs2/*/synth/
+saved_kbs2/*/candidates/
+saved_kbs2/backbones/
+Journal_paper_02_kbs_revise2/
+.ipynb_checkpoints/

@@ -1,0 +1,161 @@
+"""
+Shift / fake-quality metrics for BAGAN diagnostics.
+
+Single public entry: compute_fid(real, fake, device) — Fréchet Inception
+Distance between real and fake image tensors, using pretrained InceptionV3
+(IMAGENET1K_V1) pool_3 features (2048-D).
+
+Designed for 64x64 greyscale Fashion-MNIST tensors in [-1, 1]; internally
+resizes to 299x299 and tiles 1 -> 3 channels for Inception input.
+
+Reference:
+    Heusel et al. (2017), "GANs Trained by a Two Time-Scale Update Rule
+    Converge to a Local Nash Equilibrium". https://arxiv.org/abs/1706.08500
+"""
+
+from __future__ import annotations
+
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from scipy import linalg
+from torchvision.models import inception_v3, Inception_V3_Weights
+
+print("shift_metrics.py loaded")
+
+_INCEPTION: nn.Module | None = None
+
+
+def _get_inception(device: str | torch.device) -> nn.Module:
+    """Lazy singleton loader for InceptionV3 pool_3 feature extractor."""
+    global _INCEPTION
+    if _INCEPTION is None:
+        model = inception_v3(
+            weights=Inception_V3_Weights.IMAGENET1K_V1,
+            aux_logits=True,            # weights require aux_logits=True
+            transform_input=True,       # expects inputs in [0, 1]
+        )
+        model.fc = nn.Identity()        # pool_3 features (2048-D)
+        model.AuxLogits = None          # disable aux head
+        model.eval()
+        _INCEPTION = model
+    _INCEPTION.to(device)
+    return _INCEPTION
+
+
+def _prep_for_inception(x: torch.Tensor) -> torch.Tensor:
+    """[N,1,64,64] in [-1,1] -> [N,3,299,299] in [0,1]."""
+    if x.dim() != 4:
+        raise ValueError(f"expected 4D tensor, got shape {tuple(x.shape)}")
+    # [-1, 1] -> [0, 1]
+    x = (x + 1.0) / 2.0
+    x = x.clamp(0.0, 1.0)
+    # greyscale -> RGB
+    if x.shape[1] == 1:
+        x = x.repeat(1, 3, 1, 1)
+    # resize
+    if x.shape[-1] != 299 or x.shape[-2] != 299:
+        x = F.interpolate(x, size=(299, 299), mode="bilinear", align_corners=False)
+    return x
+
+
+@torch.no_grad()
+def _extract_features(
+    images: torch.Tensor,
+    model: nn.Module,
+    device: str | torch.device,
+    batch_size: int = 32,
+) -> np.ndarray:
+    """Run Inception in batches; return [N, 2048] float64 numpy array."""
+    feats: list[np.ndarray] = []
+    n = images.shape[0]
+    for i in range(0, n, batch_size):
+        batch = images[i : i + batch_size].to(device)
+        batch = _prep_for_inception(batch)
+        out = model(batch)
+        if isinstance(out, tuple):          # safety; aux should be disabled
+            out = out[0]
+        feats.append(out.detach().cpu().numpy().astype(np.float64))
+    return np.concatenate(feats, axis=0)
+
+
+def _frechet_distance(
+    mu1: np.ndarray,
+    sigma1: np.ndarray,
+    mu2: np.ndarray,
+    sigma2: np.ndarray,
+    eps: float = 1e-6,
+    ridge_frac: float = 1e-3,
+) -> float:
+    """Compute ||mu1-mu2||^2 + Tr(s1 + s2 - 2*sqrt(s1@s2)) with stability fix.
+
+    Proactively shrinks both covariances toward a scaled identity before the
+    matrix square root (`ridge_frac` of each matrix's own mean eigenvalue,
+    trace/dim), instead of only patching things up reactively once sqrtm has
+    already produced a non-finite result. This dataset's real-reference
+    counts (720/36/36 per class) are all below the 2048-dim Inception
+    feature space, so every class's real covariance is rank-deficient, not
+    only the minority ones -- `sigma1 @ sigma2` for a near-singular pair is
+    ill-conditioned enough that its matrix square root can swing by 100+ FID
+    points, or land on a spurious large imaginary part, between numerically
+    equivalent reruns of an otherwise-identical seed. `ridge_frac` is chosen
+    small enough to leave a well-conditioned pair's FID changed by a
+    fraction of a point (see ablation/tests or the scratch validation that
+    accompanied this change) while being enough to keep sqrtm's input
+    non-singular for a rank-deficient pair.
+    """
+    diff = mu1 - mu2
+
+    d = sigma1.shape[0]
+    ridge1 = ridge_frac * (np.trace(sigma1) / d)
+    ridge2 = ridge_frac * (np.trace(sigma2) / d)
+    sigma1 = sigma1 + np.eye(d) * ridge1
+    sigma2 = sigma2 + np.eye(d) * ridge2
+
+    covmean, _ = linalg.sqrtm(sigma1 @ sigma2, disp=False)
+    if not np.isfinite(covmean).all():
+        # Still non-finite even after proactive shrinkage: fall back to a
+        # larger, absolute ridge as a last resort.
+        offset = np.eye(d) * eps
+        covmean = linalg.sqrtm((sigma1 + offset) @ (sigma2 + offset))
+
+    # Strip imaginary part from numerical noise
+    if np.iscomplexobj(covmean):
+        if not np.allclose(np.diagonal(covmean).imag, 0, atol=1e-3):
+            m = np.max(np.abs(covmean.imag))
+            raise ValueError(f"sqrtm produced large imaginary part: {m}")
+        covmean = covmean.real
+
+    tr_covmean = np.trace(covmean)
+    return float(diff @ diff + np.trace(sigma1) + np.trace(sigma2) - 2.0 * tr_covmean)
+
+
+def compute_fid(
+    real_images: torch.Tensor,
+    fake_images: torch.Tensor,
+    device: str | torch.device,
+    batch_size: int = 32,
+) -> float:
+    """Fréchet Inception Distance between two image tensors.
+
+    Args:
+        real_images: [N, 1, H, W] tensor in [-1, 1].
+        fake_images: [M, 1, H, W] tensor in [-1, 1].
+        device:      torch device for the Inception model.
+        batch_size:  Inception batch size (default 32 — fits on small GPUs).
+
+    Returns:
+        FID as a Python float. Lower is better.
+    """
+    model = _get_inception(device)
+
+    feats_r = _extract_features(real_images, model, device, batch_size)
+    feats_f = _extract_features(fake_images, model, device, batch_size)
+
+    mu_r = feats_r.mean(axis=0)
+    mu_f = feats_f.mean(axis=0)
+    sigma_r = np.cov(feats_r, rowvar=False)
+    sigma_f = np.cov(feats_f, rowvar=False)
+
+    return _frechet_distance(mu_r, sigma_r, mu_f, sigma_f)

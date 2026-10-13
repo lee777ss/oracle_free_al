@@ -1,0 +1,901 @@
+dataset,method,seed,class,minority,recall,precision
+fashion_mnist,Imbalanced-naive,42,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,42,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,42,Shirt,True,0.2,0.625
+fashion_mnist,Imbalanced-naive,43,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,43,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,43,Shirt,True,0.2,0.625
+fashion_mnist,Imbalanced-naive,44,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,44,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,44,Shirt,True,0.2,0.625
+fashion_mnist,Imbalanced-naive,45,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,45,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,45,Shirt,True,0.2,0.625
+fashion_mnist,Imbalanced-naive,46,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,46,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,46,Shirt,True,0.2,0.625
+fashion_mnist,Imbalanced-naive,47,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,47,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,47,Shirt,True,0.2,0.625
+fashion_mnist,Imbalanced-naive,48,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,48,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,48,Shirt,True,0.2,0.625
+fashion_mnist,Imbalanced-naive,49,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,49,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,49,Shirt,True,0.2,0.625
+fashion_mnist,Imbalanced-naive,50,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,50,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,50,Shirt,True,0.2,0.625
+fashion_mnist,Imbalanced-naive,51,Pullover,False,0.985,0.9380952380952381
+fashion_mnist,Imbalanced-naive,51,Coat,True,0.4,0.5882352941176471
+fashion_mnist,Imbalanced-naive,51,Shirt,True,0.2,0.625
+fashion_mnist,Class-weighted,42,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,42,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,42,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Class-weighted,43,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,43,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,43,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Class-weighted,44,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,44,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,44,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Class-weighted,45,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,45,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,45,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Class-weighted,46,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,46,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,46,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Class-weighted,47,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,47,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,47,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Class-weighted,48,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,48,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,48,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Class-weighted,49,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,49,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,49,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Class-weighted,50,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,50,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,50,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Class-weighted,51,Pullover,False,0.946,0.9565217391304348
+fashion_mnist,Class-weighted,51,Coat,True,0.44,0.44
+fashion_mnist,Class-weighted,51,Shirt,True,0.54,0.4426229508196721
+fashion_mnist,Random oversampling,42,Pullover,False,0.948,0.9575757575757575
+fashion_mnist,Random oversampling,42,Coat,True,0.48,0.3870967741935484
+fashion_mnist,Random oversampling,42,Shirt,True,0.44,0.4583333333333333
+fashion_mnist,Random oversampling,43,Pullover,False,0.971,0.951028403525955
+fashion_mnist,Random oversampling,43,Coat,True,0.44,0.5789473684210527
+fashion_mnist,Random oversampling,43,Shirt,True,0.42,0.5121951219512195
+fashion_mnist,Random oversampling,44,Pullover,False,0.95,0.958627648839556
+fashion_mnist,Random oversampling,44,Coat,True,0.42,0.4666666666666667
+fashion_mnist,Random oversampling,44,Shirt,True,0.58,0.453125
+fashion_mnist,Random oversampling,45,Pullover,False,0.962,0.9496544916090819
+fashion_mnist,Random oversampling,45,Coat,True,0.48,0.47058823529411764
+fashion_mnist,Random oversampling,45,Shirt,True,0.38,0.5277777777777778
+fashion_mnist,Random oversampling,46,Pullover,False,0.96,0.9552238805970149
+fashion_mnist,Random oversampling,46,Coat,True,0.44,0.5116279069767442
+fashion_mnist,Random oversampling,46,Shirt,True,0.52,0.5
+fashion_mnist,Random oversampling,47,Pullover,False,0.909,0.9629237288135594
+fashion_mnist,Random oversampling,47,Coat,True,0.48,0.36923076923076925
+fashion_mnist,Random oversampling,47,Shirt,True,0.6,0.32967032967032966
+fashion_mnist,Random oversampling,48,Pullover,False,0.938,0.9620512820512821
+fashion_mnist,Random oversampling,48,Coat,True,0.58,0.38666666666666666
+fashion_mnist,Random oversampling,48,Shirt,True,0.5,0.5
+fashion_mnist,Random oversampling,49,Pullover,False,0.946,0.9574898785425101
+fashion_mnist,Random oversampling,49,Coat,True,0.5,0.4166666666666667
+fashion_mnist,Random oversampling,49,Shirt,True,0.48,0.46153846153846156
+fashion_mnist,Random oversampling,50,Pullover,False,0.918,0.9693769799366421
+fashion_mnist,Random oversampling,50,Coat,True,0.6,0.37037037037037035
+fashion_mnist,Random oversampling,50,Shirt,True,0.6,0.4166666666666667
+fashion_mnist,Random oversampling,51,Pullover,False,0.956,0.9540918163672655
+fashion_mnist,Random oversampling,51,Coat,True,0.44,0.4583333333333333
+fashion_mnist,Random oversampling,51,Shirt,True,0.48,0.48
+fashion_mnist,Std.\ augmentation,42,Pullover,False,0.825,0.972877358490566
+fashion_mnist,Std.\ augmentation,42,Coat,True,0.66,0.22448979591836735
+fashion_mnist,Std.\ augmentation,42,Shirt,True,0.58,0.2761904761904762
+fashion_mnist,Std.\ augmentation,43,Pullover,False,0.888,0.958963282937365
+fashion_mnist,Std.\ augmentation,43,Coat,True,0.62,0.29523809523809524
+fashion_mnist,Std.\ augmentation,43,Shirt,True,0.4,0.2898550724637681
+fashion_mnist,Std.\ augmentation,44,Pullover,False,0.85,0.9626274065685164
+fashion_mnist,Std.\ augmentation,44,Coat,True,0.58,0.2283464566929134
+fashion_mnist,Std.\ augmentation,44,Shirt,True,0.48,0.26666666666666666
+fashion_mnist,Std.\ augmentation,45,Pullover,False,0.791,0.9813895781637717
+fashion_mnist,Std.\ augmentation,45,Coat,True,0.54,0.21774193548387097
+fashion_mnist,Std.\ augmentation,45,Shirt,True,0.58,0.17058823529411765
+fashion_mnist,Std.\ augmentation,46,Pullover,False,0.841,0.9524348810872028
+fashion_mnist,Std.\ augmentation,46,Coat,True,0.64,0.23880597014925373
+fashion_mnist,Std.\ augmentation,46,Shirt,True,0.38,0.2289156626506024
+fashion_mnist,Std.\ augmentation,47,Pullover,False,0.824,0.9660023446658851
+fashion_mnist,Std.\ augmentation,47,Coat,True,0.44,0.21782178217821782
+fashion_mnist,Std.\ augmentation,47,Shirt,True,0.54,0.18493150684931506
+fashion_mnist,Std.\ augmentation,48,Pullover,False,0.83,0.9651162790697675
+fashion_mnist,Std.\ augmentation,48,Coat,True,0.66,0.22
+fashion_mnist,Std.\ augmentation,48,Shirt,True,0.42,0.23333333333333334
+fashion_mnist,Std.\ augmentation,49,Pullover,False,0.842,0.9644902634593356
+fashion_mnist,Std.\ augmentation,49,Coat,True,0.66,0.275
+fashion_mnist,Std.\ augmentation,49,Shirt,True,0.48,0.22429906542056074
+fashion_mnist,Std.\ augmentation,50,Pullover,False,0.861,0.9706877113866967
+fashion_mnist,Std.\ augmentation,50,Coat,True,0.5,0.29069767441860467
+fashion_mnist,Std.\ augmentation,50,Shirt,True,0.6,0.23622047244094488
+fashion_mnist,Std.\ augmentation,51,Pullover,False,0.84,0.9722222222222222
+fashion_mnist,Std.\ augmentation,51,Coat,True,0.6,0.2777777777777778
+fashion_mnist,Std.\ augmentation,51,Shirt,True,0.58,0.2265625
+fashion_mnist,DCGAN,42,Pullover,False,0.813,0.9564705882352941
+fashion_mnist,DCGAN,42,Coat,True,0.6,0.2542372881355932
+fashion_mnist,DCGAN,42,Shirt,True,0.42,0.1590909090909091
+fashion_mnist,DCGAN,43,Pullover,False,0.943,0.9525252525252526
+fashion_mnist,DCGAN,43,Coat,True,0.4,0.37037037037037035
+fashion_mnist,DCGAN,43,Shirt,True,0.46,0.4107142857142857
+fashion_mnist,DCGAN,44,Pullover,False,0.908,0.9628844114528102
+fashion_mnist,DCGAN,44,Coat,True,0.5,0.4098360655737705
+fashion_mnist,DCGAN,44,Shirt,True,0.6,0.3125
+fashion_mnist,DCGAN,45,Pullover,False,0.889,0.9642082429501084
+fashion_mnist,DCGAN,45,Coat,True,0.42,0.2916666666666667
+fashion_mnist,DCGAN,45,Shirt,True,0.68,0.32075471698113206
+fashion_mnist,DCGAN,46,Pullover,False,0.885,0.9619565217391305
+fashion_mnist,DCGAN,46,Coat,True,0.62,0.2719298245614035
+fashion_mnist,DCGAN,46,Shirt,True,0.46,0.3484848484848485
+fashion_mnist,DCGAN,47,Pullover,False,0.87,0.9655937846836848
+fashion_mnist,DCGAN,47,Coat,True,0.52,0.2524271844660194
+fashion_mnist,DCGAN,47,Shirt,True,0.58,0.3020833333333333
+fashion_mnist,DCGAN,48,Pullover,False,0.769,0.9685138539042821
+fashion_mnist,DCGAN,48,Coat,True,0.7,0.20833333333333334
+fashion_mnist,DCGAN,48,Shirt,True,0.52,0.18840579710144928
+fashion_mnist,DCGAN,49,Pullover,False,0.83,0.9718969555035128
+fashion_mnist,DCGAN,49,Coat,True,0.62,0.19375
+fashion_mnist,DCGAN,49,Shirt,True,0.5,0.29069767441860467
+fashion_mnist,DCGAN,50,Pullover,False,0.856,0.9694224235560589
+fashion_mnist,DCGAN,50,Coat,True,0.5,0.25773195876288657
+fashion_mnist,DCGAN,50,Shirt,True,0.66,0.275
+fashion_mnist,DCGAN,51,Pullover,False,0.852,0.9605411499436303
+fashion_mnist,DCGAN,51,Coat,True,0.62,0.2198581560283688
+fashion_mnist,DCGAN,51,Shirt,True,0.4,0.2777777777777778
+fashion_mnist,cGAN,42,Pullover,False,0.949,0.9528112449799196
+fashion_mnist,cGAN,42,Coat,True,0.26,0.35135135135135137
+fashion_mnist,cGAN,42,Shirt,True,0.44,0.3283582089552239
+fashion_mnist,cGAN,43,Pullover,False,0.773,0.9698870765370138
+fashion_mnist,cGAN,43,Coat,True,0.58,0.17682926829268292
+fashion_mnist,cGAN,43,Shirt,True,0.58,0.20863309352517986
+fashion_mnist,cGAN,44,Pullover,False,0.874,0.9668141592920354
+fashion_mnist,cGAN,44,Coat,True,0.52,0.3291139240506329
+fashion_mnist,cGAN,44,Shirt,True,0.56,0.23931623931623933
+fashion_mnist,cGAN,45,Pullover,False,0.936,0.9531568228105907
+fashion_mnist,cGAN,45,Coat,True,0.38,0.40425531914893614
+fashion_mnist,cGAN,45,Shirt,True,0.58,0.4084507042253521
+fashion_mnist,cGAN,46,Pullover,False,0.924,0.9655172413793104
+fashion_mnist,cGAN,46,Coat,True,0.5,0.4166666666666667
+fashion_mnist,cGAN,46,Shirt,True,0.66,0.39759036144578314
+fashion_mnist,cGAN,47,Pullover,False,0.83,0.9651162790697675
+fashion_mnist,cGAN,47,Coat,True,0.36,0.3103448275862069
+fashion_mnist,cGAN,47,Shirt,True,0.72,0.1978021978021978
+fashion_mnist,cGAN,48,Pullover,False,0.865,0.9697309417040358
+fashion_mnist,cGAN,48,Coat,True,0.54,0.3
+fashion_mnist,cGAN,48,Shirt,True,0.68,0.288135593220339
+fashion_mnist,cGAN,49,Pullover,False,0.77,0.9759188846641318
+fashion_mnist,cGAN,49,Coat,True,0.66,0.16176470588235295
+fashion_mnist,cGAN,49,Shirt,True,0.48,0.22429906542056074
+fashion_mnist,cGAN,50,Pullover,False,0.87,0.9666666666666667
+fashion_mnist,cGAN,50,Coat,True,0.52,0.30952380952380953
+fashion_mnist,cGAN,50,Shirt,True,0.66,0.28448275862068967
+fashion_mnist,cGAN,51,Pullover,False,0.81,0.9735576923076923
+fashion_mnist,cGAN,51,Coat,True,0.56,0.2074074074074074
+fashion_mnist,cGAN,51,Shirt,True,0.6,0.22556390977443608
+fashion_mnist,ACGAN,42,Pullover,False,0.842,0.9756662804171495
+fashion_mnist,ACGAN,42,Coat,True,0.5,0.23809523809523808
+fashion_mnist,ACGAN,42,Shirt,True,0.62,0.23484848484848486
+fashion_mnist,ACGAN,43,Pullover,False,0.866,0.9686800894854586
+fashion_mnist,ACGAN,43,Coat,True,0.46,0.18110236220472442
+fashion_mnist,ACGAN,43,Shirt,True,0.48,0.3037974683544304
+fashion_mnist,ACGAN,44,Pullover,False,0.946,0.9478957915831663
+fashion_mnist,ACGAN,44,Coat,True,0.36,0.391304347826087
+fashion_mnist,ACGAN,44,Shirt,True,0.32,0.2857142857142857
+fashion_mnist,ACGAN,45,Pullover,False,0.829,0.9718640093786636
+fashion_mnist,ACGAN,45,Coat,True,0.52,0.23423423423423423
+fashion_mnist,ACGAN,45,Shirt,True,0.56,0.20588235294117646
+fashion_mnist,ACGAN,46,Pullover,False,0.86,0.9728506787330317
+fashion_mnist,ACGAN,46,Coat,True,0.44,0.2222222222222222
+fashion_mnist,ACGAN,46,Shirt,True,0.58,0.24786324786324787
+fashion_mnist,ACGAN,47,Pullover,False,0.91,0.9619450317124736
+fashion_mnist,ACGAN,47,Coat,True,0.4,0.2898550724637681
+fashion_mnist,ACGAN,47,Shirt,True,0.5,0.29411764705882354
+fashion_mnist,ACGAN,48,Pullover,False,0.785,0.9775840597758406
+fashion_mnist,ACGAN,48,Coat,True,0.5,0.21367521367521367
+fashion_mnist,ACGAN,48,Shirt,True,0.6,0.16666666666666666
+fashion_mnist,ACGAN,49,Pullover,False,0.966,0.9415204678362573
+fashion_mnist,ACGAN,49,Coat,True,0.3,0.4166666666666667
+fashion_mnist,ACGAN,49,Shirt,True,0.32,0.42105263157894735
+fashion_mnist,ACGAN,50,Pullover,False,0.949,0.9509018036072144
+fashion_mnist,ACGAN,50,Coat,True,0.36,0.45
+fashion_mnist,ACGAN,50,Shirt,True,0.42,0.3387096774193548
+fashion_mnist,ACGAN,51,Pullover,False,0.918,0.9582463465553236
+fashion_mnist,ACGAN,51,Coat,True,0.38,0.25675675675675674
+fashion_mnist,ACGAN,51,Shirt,True,0.48,0.35294117647058826
+fashion_mnist,WGAN-GP,42,Pullover,False,0.885,0.9577922077922078
+fashion_mnist,WGAN-GP,42,Coat,True,0.66,0.275
+fashion_mnist,WGAN-GP,42,Shirt,True,0.34,0.30357142857142855
+fashion_mnist,WGAN-GP,43,Pullover,False,0.926,0.9576008273009308
+fashion_mnist,WGAN-GP,43,Coat,True,0.48,0.3333333333333333
+fashion_mnist,WGAN-GP,43,Shirt,True,0.46,0.3770491803278688
+fashion_mnist,WGAN-GP,44,Pullover,False,0.826,0.9694835680751174
+fashion_mnist,WGAN-GP,44,Coat,True,0.68,0.20987654320987653
+fashion_mnist,WGAN-GP,44,Shirt,True,0.42,0.2441860465116279
+fashion_mnist,WGAN-GP,45,Pullover,False,0.844,0.9504504504504504
+fashion_mnist,WGAN-GP,45,Coat,True,0.5,0.25773195876288657
+fashion_mnist,WGAN-GP,45,Shirt,True,0.46,0.2
+fashion_mnist,WGAN-GP,46,Pullover,False,0.774,0.9687108886107635
+fashion_mnist,WGAN-GP,46,Coat,True,0.64,0.23357664233576642
+fashion_mnist,WGAN-GP,46,Shirt,True,0.58,0.17682926829268292
+fashion_mnist,WGAN-GP,47,Pullover,False,0.809,0.9677033492822966
+fashion_mnist,WGAN-GP,47,Coat,True,0.54,0.27835051546391754
+fashion_mnist,WGAN-GP,47,Shirt,True,0.64,0.19161676646706588
+fashion_mnist,WGAN-GP,48,Pullover,False,0.726,0.9731903485254692
+fashion_mnist,WGAN-GP,48,Coat,True,0.44,0.16176470588235295
+fashion_mnist,WGAN-GP,48,Shirt,True,0.64,0.14678899082568808
+fashion_mnist,WGAN-GP,49,Pullover,False,0.871,0.9688542825361512
+fashion_mnist,WGAN-GP,49,Coat,True,0.58,0.25663716814159293
+fashion_mnist,WGAN-GP,49,Shirt,True,0.6,0.3409090909090909
+fashion_mnist,WGAN-GP,50,Pullover,False,0.811,0.9609004739336493
+fashion_mnist,WGAN-GP,50,Coat,True,0.62,0.2108843537414966
+fashion_mnist,WGAN-GP,50,Shirt,True,0.42,0.1926605504587156
+fashion_mnist,WGAN-GP,51,Pullover,False,0.807,0.9722891566265061
+fashion_mnist,WGAN-GP,51,Coat,True,0.54,0.2571428571428571
+fashion_mnist,WGAN-GP,51,Shirt,True,0.74,0.22424242424242424
+fashion_mnist,BAGAN,42,Pullover,False,0.907,0.9587737843551797
+fashion_mnist,BAGAN,42,Coat,True,0.48,0.27906976744186046
+fashion_mnist,BAGAN,42,Shirt,True,0.42,0.3088235294117647
+fashion_mnist,BAGAN,43,Pullover,False,0.917,0.9652631578947368
+fashion_mnist,BAGAN,43,Coat,True,0.36,0.4186046511627907
+fashion_mnist,BAGAN,43,Shirt,True,0.66,0.308411214953271
+fashion_mnist,BAGAN,44,Pullover,False,0.906,0.9617834394904459
+fashion_mnist,BAGAN,44,Coat,True,0.46,0.23711340206185566
+fashion_mnist,BAGAN,44,Shirt,True,0.46,0.3770491803278688
+fashion_mnist,BAGAN,45,Pullover,False,0.82,0.9669811320754716
+fashion_mnist,BAGAN,45,Coat,True,0.5,0.2336448598130841
+fashion_mnist,BAGAN,45,Shirt,True,0.62,0.21379310344827587
+fashion_mnist,BAGAN,46,Pullover,False,0.899,0.9483122362869199
+fashion_mnist,BAGAN,46,Coat,True,0.34,0.3148148148148148
+fashion_mnist,BAGAN,46,Shirt,True,0.46,0.23469387755102042
+fashion_mnist,BAGAN,47,Pullover,False,0.85,0.9692132269099202
+fashion_mnist,BAGAN,47,Coat,True,0.62,0.22962962962962963
+fashion_mnist,BAGAN,47,Shirt,True,0.54,0.3068181818181818
+fashion_mnist,BAGAN,48,Pullover,False,0.871,0.9613686534216336
+fashion_mnist,BAGAN,48,Coat,True,0.52,0.2524271844660194
+fashion_mnist,BAGAN,48,Shirt,True,0.56,0.3076923076923077
+fashion_mnist,BAGAN,49,Pullover,False,0.878,0.9595628415300547
+fashion_mnist,BAGAN,49,Coat,True,0.46,0.23469387755102042
+fashion_mnist,BAGAN,49,Shirt,True,0.5,0.28735632183908044
+fashion_mnist,BAGAN,50,Pullover,False,0.892,0.9653679653679653
+fashion_mnist,BAGAN,50,Coat,True,0.52,0.26
+fashion_mnist,BAGAN,50,Shirt,True,0.44,0.2894736842105263
+fashion_mnist,BAGAN,51,Pullover,False,0.885,0.9682713347921226
+fashion_mnist,BAGAN,51,Coat,True,0.44,0.2268041237113402
+fashion_mnist,BAGAN,51,Shirt,True,0.6,0.33707865168539325
+fashion_mnist,Proposed,42,Pullover,False,0.87,0.9655937846836848
+fashion_mnist,Proposed,42,Coat,True,0.62,0.2980769230769231
+fashion_mnist,Proposed,42,Shirt,True,0.56,0.29473684210526313
+fashion_mnist,Proposed,43,Pullover,False,0.849,0.9464882943143813
+fashion_mnist,Proposed,43,Coat,True,0.6,0.21428571428571427
+fashion_mnist,Proposed,43,Shirt,True,0.3,0.23809523809523808
+fashion_mnist,Proposed,44,Pullover,False,0.829,0.9775943396226415
+fashion_mnist,Proposed,44,Coat,True,0.72,0.2706766917293233
+fashion_mnist,Proposed,44,Shirt,True,0.66,0.2773109243697479
+fashion_mnist,Proposed,45,Pullover,False,0.876,0.9700996677740864
+fashion_mnist,Proposed,45,Coat,True,0.6,0.24
+fashion_mnist,Proposed,45,Shirt,True,0.58,0.4027777777777778
+fashion_mnist,Proposed,46,Pullover,False,0.865,0.9697309417040358
+fashion_mnist,Proposed,46,Coat,True,0.6,0.2830188679245283
+fashion_mnist,Proposed,46,Shirt,True,0.6,0.29411764705882354
+fashion_mnist,Proposed,47,Pullover,False,0.905,0.9617428267800212
+fashion_mnist,Proposed,47,Coat,True,0.44,0.39285714285714285
+fashion_mnist,Proposed,47,Shirt,True,0.56,0.27184466019417475
+fashion_mnist,Proposed,48,Pullover,False,0.885,0.9682713347921226
+fashion_mnist,Proposed,48,Coat,True,0.54,0.24770642201834864
+fashion_mnist,Proposed,48,Shirt,True,0.54,0.35064935064935066
+fashion_mnist,Proposed,49,Pullover,False,0.897,0.9624463519313304
+fashion_mnist,Proposed,49,Coat,True,0.54,0.28125
+fashion_mnist,Proposed,49,Shirt,True,0.52,0.3611111111111111
+fashion_mnist,Proposed,50,Pullover,False,0.887,0.9683406113537117
+fashion_mnist,Proposed,50,Coat,True,0.6,0.297029702970297
+fashion_mnist,Proposed,50,Shirt,True,0.58,0.3493975903614458
+fashion_mnist,Proposed,51,Pullover,False,0.815,0.9713945172824792
+fashion_mnist,Proposed,51,Coat,True,0.66,0.275
+fashion_mnist,Proposed,51,Shirt,True,0.6,0.2127659574468085
+cifar10,Imbalanced-naive,42,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,42,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,42,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Imbalanced-naive,43,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,43,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,43,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Imbalanced-naive,44,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,44,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,44,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Imbalanced-naive,45,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,45,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,45,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Imbalanced-naive,46,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,46,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,46,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Imbalanced-naive,47,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,47,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,47,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Imbalanced-naive,48,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,48,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,48,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Imbalanced-naive,49,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,49,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,49,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Imbalanced-naive,50,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,50,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,50,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Imbalanced-naive,51,airplane,False,0.947,0.7486166007905138
+cifar10,Imbalanced-naive,51,automobile,True,0.4866666666666667,0.863905325443787
+cifar10,Imbalanced-naive,51,ship,True,0.38666666666666666,0.6987951807228916
+cifar10,Class-weighted,42,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,42,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,42,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Class-weighted,43,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,43,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,43,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Class-weighted,44,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,44,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,44,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Class-weighted,45,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,45,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,45,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Class-weighted,46,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,46,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,46,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Class-weighted,47,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,47,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,47,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Class-weighted,48,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,48,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,48,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Class-weighted,49,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,49,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,49,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Class-weighted,50,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,50,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,50,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Class-weighted,51,airplane,False,0.731,0.8650887573964497
+cifar10,Class-weighted,51,automobile,True,0.8233333333333334,0.6365979381443299
+cifar10,Class-weighted,51,ship,True,0.6233333333333333,0.5095367847411444
+cifar10,Random oversampling,42,airplane,False,0.797,0.8010050251256281
+cifar10,Random oversampling,42,automobile,True,0.76,0.6440677966101694
+cifar10,Random oversampling,42,ship,True,0.45,0.5378486055776892
+cifar10,Random oversampling,43,airplane,False,0.89,0.8165137614678899
+cifar10,Random oversampling,43,automobile,True,0.7233333333333334,0.7977941176470589
+cifar10,Random oversampling,43,ship,True,0.49666666666666665,0.6260504201680672
+cifar10,Random oversampling,44,airplane,False,0.621,0.9052478134110787
+cifar10,Random oversampling,44,automobile,True,0.84,0.5442764578833693
+cifar10,Random oversampling,44,ship,True,0.71,0.4722838137472284
+cifar10,Random oversampling,45,airplane,False,0.937,0.7699260476581758
+cifar10,Random oversampling,45,automobile,True,0.5933333333333334,0.8640776699029126
+cifar10,Random oversampling,45,ship,True,0.41,0.6949152542372882
+cifar10,Random oversampling,46,airplane,False,0.856,0.8318756073858115
+cifar10,Random oversampling,46,automobile,True,0.79,0.7225609756097561
+cifar10,Random oversampling,46,ship,True,0.5133333333333333,0.6337448559670782
+cifar10,Random oversampling,47,airplane,False,0.892,0.7783595113438045
+cifar10,Random oversampling,47,automobile,True,0.6633333333333333,0.7713178294573644
+cifar10,Random oversampling,47,ship,True,0.41333333333333333,0.6326530612244898
+cifar10,Random oversampling,48,airplane,False,0.788,0.8365180467091295
+cifar10,Random oversampling,48,automobile,True,0.7466666666666667,0.6726726726726727
+cifar10,Random oversampling,48,ship,True,0.5666666666666667,0.5230769230769231
+cifar10,Random oversampling,49,airplane,False,0.837,0.8540816326530613
+cifar10,Random oversampling,49,automobile,True,0.7266666666666667,0.7985347985347986
+cifar10,Random oversampling,49,ship,True,0.6166666666666667,0.5331412103746398
+cifar10,Random oversampling,50,airplane,False,0.788,0.8286014721345951
+cifar10,Random oversampling,50,automobile,True,0.81,0.6768802228412256
+cifar10,Random oversampling,50,ship,True,0.52,0.5379310344827586
+cifar10,Random oversampling,51,airplane,False,0.88,0.8073394495412844
+cifar10,Random oversampling,51,automobile,True,0.7133333333333334,0.781021897810219
+cifar10,Random oversampling,51,ship,True,0.46,0.5847457627118644
+cifar10,Std.\ augmentation,42,airplane,False,0.697,0.8594327990135635
+cifar10,Std.\ augmentation,42,automobile,True,0.8166666666666667,0.601965601965602
+cifar10,Std.\ augmentation,42,ship,True,0.6166666666666667,0.48429319371727747
+cifar10,Std.\ augmentation,43,airplane,False,0.872,0.7956204379562044
+cifar10,Std.\ augmentation,43,automobile,True,0.74,0.7231270358306189
+cifar10,Std.\ augmentation,43,ship,True,0.4,0.6091370558375635
+cifar10,Std.\ augmentation,44,airplane,False,0.806,0.8511087645195353
+cifar10,Std.\ augmentation,44,automobile,True,0.7733333333333333,0.7051671732522796
+cifar10,Std.\ augmentation,44,ship,True,0.58,0.5370370370370371
+cifar10,Std.\ augmentation,45,airplane,False,0.807,0.8243105209397344
+cifar10,Std.\ augmentation,45,automobile,True,0.7533333333333333,0.6890243902439024
+cifar10,Std.\ augmentation,45,ship,True,0.5166666666666667,0.5290102389078498
+cifar10,Std.\ augmentation,46,airplane,False,0.718,0.8329466357308585
+cifar10,Std.\ augmentation,46,automobile,True,0.5833333333333334,0.7847533632286996
+cifar10,Std.\ augmentation,46,ship,True,0.6933333333333334,0.40388349514563104
+cifar10,Std.\ augmentation,47,airplane,False,0.819,0.8149253731343283
+cifar10,Std.\ augmentation,47,automobile,True,0.75,0.7188498402555911
+cifar10,Std.\ augmentation,47,ship,True,0.4866666666666667,0.5177304964539007
+cifar10,Std.\ augmentation,48,airplane,False,0.766,0.8371584699453551
+cifar10,Std.\ augmentation,48,automobile,True,0.79,0.6601671309192201
+cifar10,Std.\ augmentation,48,ship,True,0.5333333333333333,0.49079754601226994
+cifar10,Std.\ augmentation,49,airplane,False,0.871,0.783273381294964
+cifar10,Std.\ augmentation,49,automobile,True,0.6233333333333333,0.7759336099585062
+cifar10,Std.\ augmentation,49,ship,True,0.44333333333333336,0.5384615384615384
+cifar10,Std.\ augmentation,50,airplane,False,0.663,0.8758256274768824
+cifar10,Std.\ augmentation,50,automobile,True,0.7966666666666666,0.5915841584158416
+cifar10,Std.\ augmentation,50,ship,True,0.6533333333333333,0.44646924829157175
+cifar10,Std.\ augmentation,51,airplane,False,0.743,0.8481735159817352
+cifar10,Std.\ augmentation,51,automobile,True,0.7966666666666666,0.6602209944751382
+cifar10,Std.\ augmentation,51,ship,True,0.59,0.4889502762430939
+cifar10,DCGAN,42,airplane,False,0.837,0.8254437869822485
+cifar10,DCGAN,42,automobile,True,0.75,0.7281553398058253
+cifar10,DCGAN,42,ship,True,0.52,0.5631768953068592
+cifar10,DCGAN,43,airplane,False,0.669,0.904054054054054
+cifar10,DCGAN,43,automobile,True,0.81,0.5771971496437055
+cifar10,DCGAN,43,ship,True,0.6733333333333333,0.4601366742596811
+cifar10,DCGAN,44,airplane,False,0.902,0.8118811881188119
+cifar10,DCGAN,44,automobile,True,0.7166666666666667,0.8269230769230769
+cifar10,DCGAN,44,ship,True,0.4533333333333333,0.5938864628820961
+cifar10,DCGAN,45,airplane,False,0.823,0.8502066115702479
+cifar10,DCGAN,45,automobile,True,0.7233333333333334,0.735593220338983
+cifar10,DCGAN,45,ship,True,0.61,0.543026706231454
+cifar10,DCGAN,46,airplane,False,0.81,0.8635394456289979
+cifar10,DCGAN,46,automobile,True,0.78,0.6610169491525424
+cifar10,DCGAN,46,ship,True,0.5866666666666667,0.5714285714285714
+cifar10,DCGAN,47,airplane,False,0.858,0.852882703777336
+cifar10,DCGAN,47,automobile,True,0.76,0.7475409836065574
+cifar10,DCGAN,47,ship,True,0.61,0.6332179930795848
+cifar10,DCGAN,48,airplane,False,0.84,0.8022922636103151
+cifar10,DCGAN,48,automobile,True,0.74,0.658753709198813
+cifar10,DCGAN,48,ship,True,0.44,0.6111111111111112
+cifar10,DCGAN,49,airplane,False,0.76,0.8646188850967008
+cifar10,DCGAN,49,automobile,True,0.7666666666666667,0.6284153005464481
+cifar10,DCGAN,49,ship,True,0.5933333333333334,0.5014084507042254
+cifar10,DCGAN,50,airplane,False,0.641,0.9157142857142857
+cifar10,DCGAN,50,automobile,True,0.91,0.5083798882681564
+cifar10,DCGAN,50,ship,True,0.6566666666666666,0.5426997245179064
+cifar10,DCGAN,51,airplane,False,0.77,0.8324324324324325
+cifar10,DCGAN,51,automobile,True,0.6366666666666667,0.799163179916318
+cifar10,DCGAN,51,ship,True,0.6733333333333333,0.463302752293578
+cifar10,cGAN,42,airplane,False,0.848,0.8060836501901141
+cifar10,cGAN,42,automobile,True,0.77,0.6581196581196581
+cifar10,cGAN,42,ship,True,0.3933333333333333,0.5989847715736041
+cifar10,cGAN,43,airplane,False,0.793,0.832983193277311
+cifar10,cGAN,43,automobile,True,0.78,0.6610169491525424
+cifar10,cGAN,43,ship,True,0.5366666666666666,0.5476190476190477
+cifar10,cGAN,44,airplane,False,0.73,0.8880778588807786
+cifar10,cGAN,44,automobile,True,0.75,0.6373937677053825
+cifar10,cGAN,44,ship,True,0.68,0.48
+cifar10,cGAN,45,airplane,False,0.826,0.8385786802030457
+cifar10,cGAN,45,automobile,True,0.81,0.6603260869565217
+cifar10,cGAN,45,ship,True,0.49666666666666665,0.6032388663967612
+cifar10,cGAN,46,airplane,False,0.84,0.8275862068965517
+cifar10,cGAN,46,automobile,True,0.78,0.7134146341463414
+cifar10,cGAN,46,ship,True,0.51,0.5953307392996109
+cifar10,cGAN,47,airplane,False,0.798,0.8664495114006515
+cifar10,cGAN,47,automobile,True,0.7266666666666667,0.7194719471947195
+cifar10,cGAN,47,ship,True,0.65,0.5186170212765957
+cifar10,cGAN,48,airplane,False,0.902,0.8351851851851851
+cifar10,cGAN,48,automobile,True,0.81,0.826530612244898
+cifar10,cGAN,48,ship,True,0.5133333333333333,0.6814159292035398
+cifar10,cGAN,49,airplane,False,0.843,0.8256611165523996
+cifar10,cGAN,49,automobile,True,0.7566666666666667,0.7668918918918919
+cifar10,cGAN,49,ship,True,0.5066666666666667,0.5371024734982333
+cifar10,cGAN,50,airplane,False,0.877,0.7987249544626593
+cifar10,cGAN,50,automobile,True,0.76,0.7524752475247525
+cifar10,cGAN,50,ship,True,0.41,0.6180904522613065
+cifar10,cGAN,51,airplane,False,0.68,0.9054593874833555
+cifar10,cGAN,51,automobile,True,0.78,0.6223404255319149
+cifar10,cGAN,51,ship,True,0.7466666666666667,0.47357293868921774
+cifar10,ACGAN,42,airplane,False,0.809,0.8255102040816327
+cifar10,ACGAN,42,automobile,True,0.7066666666666667,0.6905537459283387
+cifar10,ACGAN,42,ship,True,0.56,0.536741214057508
+cifar10,ACGAN,43,airplane,False,0.792,0.8407643312101911
+cifar10,ACGAN,43,automobile,True,0.6633333333333333,0.737037037037037
+cifar10,ACGAN,43,ship,True,0.62,0.4793814432989691
+cifar10,ACGAN,44,airplane,False,0.775,0.8630289532293987
+cifar10,ACGAN,44,automobile,True,0.6866666666666666,0.7228070175438597
+cifar10,ACGAN,44,ship,True,0.65,0.4676258992805755
+cifar10,ACGAN,45,airplane,False,0.71,0.8722358722358723
+cifar10,ACGAN,45,automobile,True,0.7666666666666667,0.6424581005586593
+cifar10,ACGAN,45,ship,True,0.6633333333333333,0.4649532710280374
+cifar10,ACGAN,46,airplane,False,0.641,0.8829201101928374
+cifar10,ACGAN,46,automobile,True,0.76,0.59375
+cifar10,ACGAN,46,ship,True,0.6966666666666667,0.42653061224489797
+cifar10,ACGAN,47,airplane,False,0.686,0.8727735368956743
+cifar10,ACGAN,47,automobile,True,0.8833333333333333,0.5532359081419624
+cifar10,ACGAN,47,ship,True,0.56,0.5014925373134328
+cifar10,ACGAN,48,airplane,False,0.693,0.8839285714285714
+cifar10,ACGAN,48,automobile,True,0.8966666666666666,0.509469696969697
+cifar10,ACGAN,48,ship,True,0.5366666666666666,0.5590277777777778
+cifar10,ACGAN,49,airplane,False,0.832,0.8295114656031904
+cifar10,ACGAN,49,automobile,True,0.71,0.6740506329113924
+cifar10,ACGAN,49,ship,True,0.5366666666666666,0.5729537366548043
+cifar10,ACGAN,50,airplane,False,0.875,0.8154706430568499
+cifar10,ACGAN,50,automobile,True,0.69,0.7340425531914894
+cifar10,ACGAN,50,ship,True,0.49333333333333335,0.6040816326530613
+cifar10,ACGAN,51,airplane,False,0.747,0.869615832363213
+cifar10,ACGAN,51,automobile,True,0.7066666666666667,0.6217008797653959
+cifar10,ACGAN,51,ship,True,0.6533333333333333,0.49
+cifar10,WGAN-GP,42,airplane,False,0.738,0.858139534883721
+cifar10,WGAN-GP,42,automobile,True,0.79,0.6457765667574932
+cifar10,WGAN-GP,42,ship,True,0.59,0.4745308310991957
+cifar10,WGAN-GP,43,airplane,False,0.731,0.8702380952380953
+cifar10,WGAN-GP,43,automobile,True,0.9133333333333333,0.5720250521920668
+cifar10,WGAN-GP,43,ship,True,0.5366666666666666,0.5729537366548043
+cifar10,WGAN-GP,44,airplane,False,0.794,0.8437832093517534
+cifar10,WGAN-GP,44,automobile,True,0.8633333333333333,0.6122931442080378
+cifar10,WGAN-GP,44,ship,True,0.48,0.6101694915254238
+cifar10,WGAN-GP,45,airplane,False,0.738,0.845360824742268
+cifar10,WGAN-GP,45,automobile,True,0.8433333333333334,0.5597345132743363
+cifar10,WGAN-GP,45,ship,True,0.49,0.5345454545454545
+cifar10,WGAN-GP,46,airplane,False,0.87,0.813844714686623
+cifar10,WGAN-GP,46,automobile,True,0.7566666666666667,0.7937062937062938
+cifar10,WGAN-GP,46,ship,True,0.51,0.6244897959183674
+cifar10,WGAN-GP,47,airplane,False,0.663,0.8816489361702128
+cifar10,WGAN-GP,47,automobile,True,0.7133333333333334,0.6772151898734177
+cifar10,WGAN-GP,47,ship,True,0.7566666666666667,0.4266917293233083
+cifar10,WGAN-GP,48,airplane,False,0.788,0.7801980198019802
+cifar10,WGAN-GP,48,automobile,True,0.58,0.7733333333333333
+cifar10,WGAN-GP,48,ship,True,0.53,0.43561643835616437
+cifar10,WGAN-GP,49,airplane,False,0.624,0.8952654232424677
+cifar10,WGAN-GP,49,automobile,True,0.7433333333333333,0.6264044943820225
+cifar10,WGAN-GP,49,ship,True,0.7566666666666667,0.4149908592321755
+cifar10,WGAN-GP,50,airplane,False,0.893,0.8185151237396884
+cifar10,WGAN-GP,50,automobile,True,0.7266666666666667,0.7730496453900709
+cifar10,WGAN-GP,50,ship,True,0.5033333333333333,0.6651982378854625
+cifar10,WGAN-GP,51,airplane,False,0.746,0.8664343786295006
+cifar10,WGAN-GP,51,automobile,True,0.6333333333333333,0.753968253968254
+cifar10,WGAN-GP,51,ship,True,0.73,0.44969199178644764
+cifar10,BAGAN,42,airplane,False,0.777,0.8283582089552238
+cifar10,BAGAN,42,automobile,True,0.83,0.6272040302267002
+cifar10,BAGAN,42,ship,True,0.45666666666666667,0.5169811320754717
+cifar10,BAGAN,43,airplane,False,0.696,0.8275862068965517
+cifar10,BAGAN,43,automobile,True,0.74,0.658753709198813
+cifar10,BAGAN,43,ship,True,0.6033333333333334,0.42890995260663506
+cifar10,BAGAN,44,airplane,False,0.892,0.8065099457504521
+cifar10,BAGAN,44,automobile,True,0.67,0.788235294117647
+cifar10,BAGAN,44,ship,True,0.51,0.6401673640167364
+cifar10,BAGAN,45,airplane,False,0.791,0.856988082340195
+cifar10,BAGAN,45,automobile,True,0.6333333333333333,0.7089552238805971
+cifar10,BAGAN,45,ship,True,0.6666666666666666,0.4889975550122249
+cifar10,BAGAN,46,airplane,False,0.894,0.8339552238805971
+cifar10,BAGAN,46,automobile,True,0.75,0.7525083612040134
+cifar10,BAGAN,46,ship,True,0.5266666666666666,0.6899563318777293
+cifar10,BAGAN,47,airplane,False,0.678,0.8771021992238034
+cifar10,BAGAN,47,automobile,True,0.8033333333333333,0.6085858585858586
+cifar10,BAGAN,47,ship,True,0.69,0.4802784222737819
+cifar10,BAGAN,48,airplane,False,0.66,0.8967391304347826
+cifar10,BAGAN,48,automobile,True,0.81,0.6411609498680739
+cifar10,BAGAN,48,ship,True,0.7533333333333333,0.465979381443299
+cifar10,BAGAN,49,airplane,False,0.903,0.7838541666666666
+cifar10,BAGAN,49,automobile,True,0.6466666666666666,0.749034749034749
+cifar10,BAGAN,49,ship,True,0.4166666666666667,0.6613756613756614
+cifar10,BAGAN,50,airplane,False,0.794,0.8411016949152542
+cifar10,BAGAN,50,automobile,True,0.7666666666666667,0.6845238095238095
+cifar10,BAGAN,50,ship,True,0.58,0.54375
+cifar10,BAGAN,51,airplane,False,0.881,0.8311320754716981
+cifar10,BAGAN,51,automobile,True,0.7633333333333333,0.7532894736842105
+cifar10,BAGAN,51,ship,True,0.5233333333333333,0.6652542372881356
+cifar10,Proposed,42,airplane,False,0.73,0.8946078431372549
+cifar10,Proposed,42,automobile,True,0.8,0.6818181818181818
+cifar10,Proposed,42,ship,True,0.7,0.4861111111111111
+cifar10,Proposed,43,airplane,False,0.825,0.8620689655172413
+cifar10,Proposed,43,automobile,True,0.7833333333333333,0.7298136645962733
+cifar10,Proposed,43,ship,True,0.6333333333333333,0.5919003115264797
+cifar10,Proposed,44,airplane,False,0.728,0.8781664656212304
+cifar10,Proposed,44,automobile,True,0.8266666666666667,0.6813186813186813
+cifar10,Proposed,44,ship,True,0.6666666666666666,0.4914004914004914
+cifar10,Proposed,45,airplane,False,0.891,0.8181818181818182
+cifar10,Proposed,45,automobile,True,0.6833333333333333,0.8134920634920635
+cifar10,Proposed,45,ship,True,0.5466666666666666,0.6332046332046332
+cifar10,Proposed,46,airplane,False,0.758,0.8722669735327964
+cifar10,Proposed,46,automobile,True,0.7566666666666667,0.7206349206349206
+cifar10,Proposed,46,ship,True,0.6833333333333333,0.49278846153846156
+cifar10,Proposed,47,airplane,False,0.844,0.8423153692614771
+cifar10,Proposed,47,automobile,True,0.75,0.7281553398058253
+cifar10,Proposed,47,ship,True,0.56,0.5813148788927336
+cifar10,Proposed,48,airplane,False,0.866,0.8208530805687204
+cifar10,Proposed,48,automobile,True,0.7066666666666667,0.7737226277372263
+cifar10,Proposed,48,ship,True,0.54,0.5977859778597786
+cifar10,Proposed,49,airplane,False,0.814,0.8435233160621761
+cifar10,Proposed,49,automobile,True,0.7866666666666666,0.7306501547987616
+cifar10,Proposed,49,ship,True,0.5733333333333334,0.5512820512820513
+cifar10,Proposed,50,airplane,False,0.658,0.89280868385346
+cifar10,Proposed,50,automobile,True,0.8966666666666666,0.538
+cifar10,Proposed,50,ship,True,0.6066666666666667,0.5013774104683195
+cifar10,Proposed,51,airplane,False,0.839,0.8440643863179075
+cifar10,Proposed,51,automobile,True,0.7833333333333333,0.7532051282051282
+cifar10,Proposed,51,ship,True,0.5666666666666667,0.5782312925170068
+stl10,Imbalanced-naive,42,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,42,dog,True,0.0,0.0
+stl10,Imbalanced-naive,42,deer,True,0.0,0.0
+stl10,Imbalanced-naive,43,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,43,dog,True,0.0,0.0
+stl10,Imbalanced-naive,43,deer,True,0.0,0.0
+stl10,Imbalanced-naive,44,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,44,dog,True,0.0,0.0
+stl10,Imbalanced-naive,44,deer,True,0.0,0.0
+stl10,Imbalanced-naive,45,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,45,dog,True,0.0,0.0
+stl10,Imbalanced-naive,45,deer,True,0.0,0.0
+stl10,Imbalanced-naive,46,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,46,dog,True,0.0,0.0
+stl10,Imbalanced-naive,46,deer,True,0.0,0.0
+stl10,Imbalanced-naive,47,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,47,dog,True,0.0,0.0
+stl10,Imbalanced-naive,47,deer,True,0.0,0.0
+stl10,Imbalanced-naive,48,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,48,dog,True,0.0,0.0
+stl10,Imbalanced-naive,48,deer,True,0.0,0.0
+stl10,Imbalanced-naive,49,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,49,dog,True,0.0,0.0
+stl10,Imbalanced-naive,49,deer,True,0.0,0.0
+stl10,Imbalanced-naive,50,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,50,dog,True,0.0,0.0
+stl10,Imbalanced-naive,50,deer,True,0.0,0.0
+stl10,Imbalanced-naive,51,cat,False,1.0,0.3333333333333333
+stl10,Imbalanced-naive,51,dog,True,0.0,0.0
+stl10,Imbalanced-naive,51,deer,True,0.0,0.0
+stl10,Class-weighted,42,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,42,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,42,deer,True,0.15375,0.5189873417721519
+stl10,Class-weighted,43,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,43,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,43,deer,True,0.15375,0.5189873417721519
+stl10,Class-weighted,44,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,44,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,44,deer,True,0.15375,0.5189873417721519
+stl10,Class-weighted,45,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,45,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,45,deer,True,0.15375,0.5189873417721519
+stl10,Class-weighted,46,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,46,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,46,deer,True,0.15375,0.5189873417721519
+stl10,Class-weighted,47,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,47,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,47,deer,True,0.15375,0.5189873417721519
+stl10,Class-weighted,48,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,48,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,48,deer,True,0.15375,0.5189873417721519
+stl10,Class-weighted,49,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,49,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,49,deer,True,0.15375,0.5189873417721519
+stl10,Class-weighted,50,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,50,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,50,deer,True,0.15375,0.5189873417721519
+stl10,Class-weighted,51,cat,False,0.86875,0.3582474226804124
+stl10,Class-weighted,51,dog,True,0.10375,0.3721973094170404
+stl10,Class-weighted,51,deer,True,0.15375,0.5189873417721519
+stl10,Random oversampling,42,cat,False,0.875,0.363447559709242
+stl10,Random oversampling,42,dog,True,0.12625,0.3519163763066202
+stl10,Random oversampling,42,deer,True,0.12625,0.5401069518716578
+stl10,Random oversampling,43,cat,False,0.8975,0.3609854198089492
+stl10,Random oversampling,43,dog,True,0.09625,0.3598130841121495
+stl10,Random oversampling,43,deer,True,0.13875,0.5634517766497462
+stl10,Random oversampling,44,cat,False,0.87625,0.3600410888546482
+stl10,Random oversampling,44,dog,True,0.115,0.36947791164658633
+stl10,Random oversampling,44,deer,True,0.14,0.5490196078431373
+stl10,Random oversampling,45,cat,False,0.8975,0.3608040201005025
+stl10,Random oversampling,45,dog,True,0.09125,0.3613861386138614
+stl10,Random oversampling,45,deer,True,0.145,0.5576923076923077
+stl10,Random oversampling,46,cat,False,0.86375,0.359334373374935
+stl10,Random oversampling,46,dog,True,0.11375,0.3775933609958506
+stl10,Random oversampling,46,deer,True,0.16125,0.5466101694915254
+stl10,Random oversampling,47,cat,False,0.965,0.345413870246085
+stl10,Random oversampling,47,dog,True,0.08625,0.45394736842105265
+stl10,Random oversampling,47,deer,True,0.00875,0.5384615384615384
+stl10,Random oversampling,48,cat,False,0.815,0.36363636363636365
+stl10,Random oversampling,48,dog,True,0.1225,0.3712121212121212
+stl10,Random oversampling,48,deer,True,0.20375,0.4752186588921283
+stl10,Random oversampling,49,cat,False,0.97125,0.33826730518067044
+stl10,Random oversampling,49,dog,True,0.06,0.5052631578947369
+stl10,Random oversampling,49,deer,True,0.005,0.5
+stl10,Random oversampling,50,cat,False,0.965,0.34235033259423503
+stl10,Random oversampling,50,dog,True,0.09,0.496551724137931
+stl10,Random oversampling,50,deer,True,0.0,0.0
+stl10,Random oversampling,51,cat,False,0.94875,0.35041551246537395
+stl10,Random oversampling,51,dog,True,0.1,0.4166666666666667
+stl10,Random oversampling,51,deer,True,0.0275,0.5238095238095238
+stl10,Std.\ augmentation,42,cat,False,0.6925,0.3581124757595346
+stl10,Std.\ augmentation,42,dog,True,0.18875,0.34953703703703703
+stl10,Std.\ augmentation,42,deer,True,0.2075,0.39429928741092635
+stl10,Std.\ augmentation,43,cat,False,0.7475,0.35595238095238096
+stl10,Std.\ augmentation,43,dog,True,0.13875,0.3523809523809524
+stl10,Std.\ augmentation,43,deer,True,0.20625,0.4074074074074074
+stl10,Std.\ augmentation,44,cat,False,0.72125,0.3563928350833848
+stl10,Std.\ augmentation,44,dog,True,0.1275,0.36042402826855124
+stl10,Std.\ augmentation,44,deer,True,0.27875,0.44779116465863456
+stl10,Std.\ augmentation,45,cat,False,0.7525,0.3395375070501974
+stl10,Std.\ augmentation,45,dog,True,0.1025,0.3333333333333333
+stl10,Std.\ augmentation,45,deer,True,0.20125,0.4225721784776903
+stl10,Std.\ augmentation,46,cat,False,0.69125,0.3674418604651163
+stl10,Std.\ augmentation,46,dog,True,0.21625,0.337890625
+stl10,Std.\ augmentation,46,deer,True,0.2,0.4177545691906005
+stl10,Std.\ augmentation,47,cat,False,0.72,0.35207823960880197
+stl10,Std.\ augmentation,47,dog,True,0.21,0.3826879271070615
+stl10,Std.\ augmentation,47,deer,True,0.17875,0.44
+stl10,Std.\ augmentation,48,cat,False,0.77875,0.3535754824063564
+stl10,Std.\ augmentation,48,dog,True,0.12125,0.3356401384083045
+stl10,Std.\ augmentation,48,deer,True,0.195,0.4469914040114613
+stl10,Std.\ augmentation,49,cat,False,0.76875,0.35943892460549387
+stl10,Std.\ augmentation,49,dog,True,0.16375,0.40061162079510704
+stl10,Std.\ augmentation,49,deer,True,0.2,0.4419889502762431
+stl10,Std.\ augmentation,50,cat,False,0.775,0.3617269544924154
+stl10,Std.\ augmentation,50,dog,True,0.1525,0.3407821229050279
+stl10,Std.\ augmentation,50,deer,True,0.21,0.5121951219512195
+stl10,Std.\ augmentation,51,cat,False,0.66625,0.36936936936936937
+stl10,Std.\ augmentation,51,dog,True,0.205,0.3416666666666667
+stl10,Std.\ augmentation,51,deer,True,0.2725,0.4570230607966457
+stl10,DCGAN,42,cat,False,0.88375,0.3481043820777942
+stl10,DCGAN,42,dog,True,0.0425,0.37777777777777777
+stl10,DCGAN,42,deer,True,0.17375,0.4982078853046595
+stl10,DCGAN,43,cat,False,0.87125,0.3556122448979592
+stl10,DCGAN,43,dog,True,0.0675,0.4186046511627907
+stl10,DCGAN,43,deer,True,0.1975,0.5080385852090032
+stl10,DCGAN,44,cat,False,0.88625,0.36584107327141385
+stl10,DCGAN,44,dog,True,0.08875,0.44654088050314467
+stl10,DCGAN,44,deer,True,0.20875,0.5511551155115512
+stl10,DCGAN,45,cat,False,0.9375,0.351288056206089
+stl10,DCGAN,45,dog,True,0.1,0.39603960396039606
+stl10,DCGAN,45,deer,True,0.04375,0.5555555555555556
+stl10,DCGAN,46,cat,False,0.8975,0.3545679012345679
+stl10,DCGAN,46,dog,True,0.08,0.4129032258064516
+stl10,DCGAN,46,deer,True,0.1525,0.5545454545454546
+stl10,DCGAN,47,cat,False,0.8425,0.36891078270388616
+stl10,DCGAN,47,dog,True,0.15625,0.37425149700598803
+stl10,DCGAN,47,deer,True,0.17,0.5690376569037657
+stl10,DCGAN,48,cat,False,0.87,0.3583934088568486
+stl10,DCGAN,48,dog,True,0.10125,0.38207547169811323
+stl10,DCGAN,48,deer,True,0.1475,0.4796747967479675
+stl10,DCGAN,49,cat,False,0.86875,0.35659312467932275
+stl10,DCGAN,49,dog,True,0.11625,0.40789473684210525
+stl10,DCGAN,49,deer,True,0.1575,0.5650224215246636
+stl10,DCGAN,50,cat,False,0.87375,0.3586454592098512
+stl10,DCGAN,50,dog,True,0.09,0.35467980295566504
+stl10,DCGAN,50,deer,True,0.1675,0.5403225806451613
+stl10,DCGAN,51,cat,False,0.86875,0.36675461741424803
+stl10,DCGAN,51,dog,True,0.1175,0.37751004016064255
+stl10,DCGAN,51,deer,True,0.1675,0.5234375
+stl10,cGAN,42,cat,False,0.84,0.36363636363636365
+stl10,cGAN,42,dog,True,0.115,0.38333333333333336
+stl10,cGAN,42,deer,True,0.1875,0.4807692307692308
+stl10,cGAN,43,cat,False,0.86125,0.36282253817798843
+stl10,cGAN,43,dog,True,0.17125,0.4241486068111455
+stl10,cGAN,43,deer,True,0.1125,0.5056179775280899
+stl10,cGAN,44,cat,False,0.87875,0.36538461538461536
+stl10,cGAN,44,dog,True,0.095,0.34080717488789236
+stl10,cGAN,44,deer,True,0.18375,0.5810276679841897
+stl10,cGAN,45,cat,False,0.8375,0.3687396807925151
+stl10,cGAN,45,dog,True,0.135,0.3673469387755102
+stl10,cGAN,45,deer,True,0.17625,0.48788927335640137
+stl10,cGAN,46,cat,False,0.87,0.3653543307086614
+stl10,cGAN,46,dog,True,0.13125,0.3776978417266187
+stl10,cGAN,46,deer,True,0.13,0.4792626728110599
+stl10,cGAN,47,cat,False,0.88125,0.35823170731707316
+stl10,cGAN,47,dog,True,0.09125,0.31877729257641924
+stl10,cGAN,47,deer,True,0.1475,0.5812807881773399
+stl10,cGAN,48,cat,False,0.8625,0.36918138041733545
+stl10,cGAN,48,dog,True,0.1175,0.373015873015873
+stl10,cGAN,48,deer,True,0.17125,0.4910394265232975
+stl10,cGAN,49,cat,False,0.84375,0.35657686212361334
+stl10,cGAN,49,dog,True,0.1275,0.3968871595330739
+stl10,cGAN,49,deer,True,0.155,0.496
+stl10,cGAN,50,cat,False,0.88375,0.36034658511722734
+stl10,cGAN,50,dog,True,0.11625,0.40611353711790393
+stl10,cGAN,50,deer,True,0.12125,0.46411483253588515
+stl10,cGAN,51,cat,False,0.8975,0.3622603430877901
+stl10,cGAN,51,dog,True,0.12625,0.39453125
+stl10,cGAN,51,deer,True,0.1075,0.5308641975308642
+stl10,ACGAN,42,cat,False,0.76375,0.3527713625866051
+stl10,ACGAN,42,dog,True,0.12875,0.30383480825958703
+stl10,ACGAN,42,deer,True,0.20625,0.5015197568389058
+stl10,ACGAN,43,cat,False,0.8175,0.365976496922216
+stl10,ACGAN,43,dog,True,0.1425,0.32947976878612717
+stl10,ACGAN,43,deer,True,0.1675,0.50187265917603
+stl10,ACGAN,44,cat,False,0.66625,0.38623188405797104
+stl10,ACGAN,44,dog,True,0.2025,0.32335329341317365
+stl10,ACGAN,44,deer,True,0.30625,0.4720616570327553
+stl10,ACGAN,45,cat,False,0.78125,0.37048014226437465
+stl10,ACGAN,45,dog,True,0.1525,0.30886075949367087
+stl10,ACGAN,45,deer,True,0.2,0.5031446540880503
+stl10,ACGAN,46,cat,False,0.77,0.36776119402985075
+stl10,ACGAN,46,dog,True,0.165,0.3656509695290859
+stl10,ACGAN,46,deer,True,0.20875,0.45879120879120877
+stl10,ACGAN,47,cat,False,0.7775,0.36957813428401665
+stl10,ACGAN,47,dog,True,0.1525,0.3475783475783476
+stl10,ACGAN,47,deer,True,0.23625,0.5163934426229508
+stl10,ACGAN,48,cat,False,0.8575,0.35673426937077485
+stl10,ACGAN,48,dog,True,0.13125,0.38181818181818183
+stl10,ACGAN,48,deer,True,0.1175,0.46534653465346537
+stl10,ACGAN,49,cat,False,0.84125,0.35627316040232926
+stl10,ACGAN,49,dog,True,0.1075,0.3346303501945525
+stl10,ACGAN,49,deer,True,0.155,0.4881889763779528
+stl10,ACGAN,50,cat,False,0.75375,0.3759351620947631
+stl10,ACGAN,50,dog,True,0.18,0.3564356435643564
+stl10,ACGAN,50,deer,True,0.245,0.5
+stl10,ACGAN,51,cat,False,0.72125,0.36107634543178974
+stl10,ACGAN,51,dog,True,0.18375,0.33638443935926776
+stl10,ACGAN,51,deer,True,0.215,0.4712328767123288
+stl10,WGAN-GP,42,cat,False,0.85,0.35751840168243953
+stl10,WGAN-GP,42,dog,True,0.08875,0.3446601941747573
+stl10,WGAN-GP,42,deer,True,0.1825,0.5
+stl10,WGAN-GP,43,cat,False,0.83125,0.3584905660377358
+stl10,WGAN-GP,43,dog,True,0.10375,0.3721973094170404
+stl10,WGAN-GP,43,deer,True,0.18625,0.46273291925465837
+stl10,WGAN-GP,44,cat,False,0.91125,0.35560975609756096
+stl10,WGAN-GP,44,dog,True,0.05875,0.3983050847457627
+stl10,WGAN-GP,44,deer,True,0.16125,0.5560344827586207
+stl10,WGAN-GP,45,cat,False,0.8525,0.36027469624933967
+stl10,WGAN-GP,45,dog,True,0.185,0.40771349862258954
+stl10,WGAN-GP,45,deer,True,0.105,0.5833333333333334
+stl10,WGAN-GP,46,cat,False,0.9225,0.3554913294797688
+stl10,WGAN-GP,46,dog,True,0.05875,0.3643410852713178
+stl10,WGAN-GP,46,deer,True,0.1225,0.5025641025641026
+stl10,WGAN-GP,47,cat,False,0.79875,0.3602029312288613
+stl10,WGAN-GP,47,dog,True,0.09875,0.3574660633484163
+stl10,WGAN-GP,47,deer,True,0.24125,0.4765432098765432
+stl10,WGAN-GP,48,cat,False,0.8875,0.35535535535535534
+stl10,WGAN-GP,48,dog,True,0.09875,0.39303482587064675
+stl10,WGAN-GP,48,deer,True,0.1275,0.5074626865671642
+stl10,WGAN-GP,49,cat,False,0.87,0.3582089552238806
+stl10,WGAN-GP,49,dog,True,0.09875,0.398989898989899
+stl10,WGAN-GP,49,deer,True,0.17625,0.5444015444015444
+stl10,WGAN-GP,50,cat,False,0.83875,0.3656675749318801
+stl10,WGAN-GP,50,dog,True,0.1375,0.41509433962264153
+stl10,WGAN-GP,50,deer,True,0.205,0.5466666666666666
+stl10,WGAN-GP,51,cat,False,0.85375,0.34918200408997957
+stl10,WGAN-GP,51,dog,True,0.08875,0.3736842105263158
+stl10,WGAN-GP,51,deer,True,0.14375,0.452755905511811
+stl10,BAGAN,42,cat,False,0.80625,0.3698394495412844
+stl10,BAGAN,42,dog,True,0.21,0.328125
+stl10,BAGAN,42,deer,True,0.10875,0.6041666666666666
+stl10,BAGAN,43,cat,False,0.88375,0.35261845386533663
+stl10,BAGAN,43,dog,True,0.1075,0.35537190082644626
+stl10,BAGAN,43,deer,True,0.105,0.5490196078431373
+stl10,BAGAN,44,cat,False,0.90875,0.35411592791037505
+stl10,BAGAN,44,dog,True,0.105,0.3888888888888889
+stl10,BAGAN,44,deer,True,0.1,0.6106870229007634
+stl10,BAGAN,45,cat,False,0.90875,0.3535992217898833
+stl10,BAGAN,45,dog,True,0.11125,0.34099616858237547
+stl10,BAGAN,45,deer,True,0.0625,0.6024096385542169
+stl10,BAGAN,46,cat,False,0.865,0.3634453781512605
+stl10,BAGAN,46,dog,True,0.11125,0.3603238866396761
+stl10,BAGAN,46,deer,True,0.17625,0.5662650602409639
+stl10,BAGAN,47,cat,False,0.9325,0.3401732786137711
+stl10,BAGAN,47,dog,True,0.0525,0.2485207100591716
+stl10,BAGAN,47,deer,True,0.025,0.5263157894736842
+stl10,BAGAN,48,cat,False,0.94625,0.349815157116451
+stl10,BAGAN,48,dog,True,0.07625,0.3112244897959184
+stl10,BAGAN,48,deer,True,0.02625,0.525
+stl10,BAGAN,49,cat,False,0.8425,0.3657080846446012
+stl10,BAGAN,49,dog,True,0.135,0.375
+stl10,BAGAN,49,deer,True,0.1575,0.4684014869888476
+stl10,BAGAN,50,cat,False,0.8875,0.35931174089068824
+stl10,BAGAN,50,dog,True,0.12125,0.4024896265560166
+stl10,BAGAN,50,deer,True,0.13625,0.5956284153005464
+stl10,BAGAN,51,cat,False,0.89375,0.36423841059602646
+stl10,BAGAN,51,dog,True,0.11375,0.3473282442748092
+stl10,BAGAN,51,deer,True,0.12375,0.5657142857142857
+stl10,Proposed,42,cat,False,0.79125,0.358843537414966
+stl10,Proposed,42,dog,True,0.0625,0.35714285714285715
+stl10,Proposed,42,deer,True,0.22125,0.35685483870967744
+stl10,Proposed,43,cat,False,0.80875,0.38443256090314915
+stl10,Proposed,43,dog,True,0.1525,0.41216216216216217
+stl10,Proposed,43,deer,True,0.27875,0.5296912114014252
+stl10,Proposed,44,cat,False,0.815,0.36773829667230684
+stl10,Proposed,44,dog,True,0.13875,0.37373737373737376
+stl10,Proposed,44,deer,True,0.18875,0.4575757575757576
+stl10,Proposed,45,cat,False,0.86125,0.36186974789915966
+stl10,Proposed,45,dog,True,0.11375,0.3760330578512397
+stl10,Proposed,45,deer,True,0.1675,0.5275590551181102
+stl10,Proposed,46,cat,False,0.83375,0.3728339854667412
+stl10,Proposed,46,dog,True,0.1225,0.36704119850187267
+stl10,Proposed,46,deer,True,0.23125,0.5377906976744186
+stl10,Proposed,47,cat,False,0.90875,0.3640460691036555
+stl10,Proposed,47,dog,True,0.085,0.40476190476190477
+stl10,Proposed,47,deer,True,0.16875,0.574468085106383
+stl10,Proposed,48,cat,False,0.8675,0.3679745493107105
+stl10,Proposed,48,dog,True,0.155,0.36046511627906974
+stl10,Proposed,48,deer,True,0.1225,0.5764705882352941
+stl10,Proposed,49,cat,False,0.875,0.360082304526749
+stl10,Proposed,49,dog,True,0.1225,0.36981132075471695
+stl10,Proposed,49,deer,True,0.13,0.5445026178010471
+stl10,Proposed,50,cat,False,0.8625,0.3676078849227491
+stl10,Proposed,50,dog,True,0.11375,0.37916666666666665
+stl10,Proposed,50,deer,True,0.19625,0.5547703180212014
+stl10,Proposed,51,cat,False,0.82875,0.36428571428571427
+stl10,Proposed,51,dog,True,0.14875,0.38387096774193546
+stl10,Proposed,51,deer,True,0.18375,0.5444444444444444

@@ -1,0 +1,33 @@
+{
+  "experiment": "E1",
+  "decision": "pass_exact",
+  "stopped_early": false,
+  "n_checks": 30,
+  "n_exact": 30,
+  "n_tolerant": 0,
+  "n_failed": 0,
+  "mean_diffs": {
+    "m10_ab8c__R1_confusable": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m10_ab8c__C2_cifar_paper": {
+      "macro_recall": 0.0,
+      "gmean": 0.0,
+      "macro_f2": 0.0,
+      "macro_specificity": 0.0
+    },
+    "m10_ab8c__S2_stl_mod": {
+      "macro_recall": 3.8857805861880476e-17,
+      "gmean": 2.7755575615628914e-17,
+      "macro_f2": 1.6653345369377347e-17,
+      "macro_specificity": 0.0
+    }
+  },
+  "tolerances": {
+    "per_seed": 0.005,
+    "mean": 0.002
+  }
+}

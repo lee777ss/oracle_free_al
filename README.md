@@ -49,13 +49,18 @@ marked *re-run* repeat the experiment (GPU).
 |---|---|---|
 | Table 3, panel A | mean and SD over seeds of `ablation_15_seeds.csv`, grouped by `row` | run `notebooks/GAAL_Ablation_133J.ipynb` for each seed 42-56 and backbone, then `notebooks/311_Ablation_15_seeds.ipynb` |
 | Table 3, panel B | mean and SD over seeds of `saved_kbs2/AB/runs.csv`, grouped by `tag` (`<rule>_nocot`); tests in `saved_kbs2/analysis/AB/`; seed-to-seed SD: `python -m kbs2.ab_stability` | `python -m kbs2.runner run AB`, then `python -m kbs2.ab_analysis` |
+| Table 4, Figure A2 (FID) | `python -m kbs2.ablation_fid_table` (reads `ablation_15_seeds.csv` and `saved/ae_fid_133J_*.npz`) | as Table 3, panel A |
+| Figure A1 | `python -m kbs2.ablation_figure` | as Table 3, panel A |
+| Figure 2 (ablation samples) | — | as Table 3, panel A (the notebook writes the sample dumps to `saved/`), then `python -m kbs2.ablation_samples` |
 | Table 6 | rows in `saved_casestudy/cs3j_*_reduced8.csv` (seven submitted methods) and `saved_kbs2/E2t`, `E2z`, `E2s` (simple remedies) | `python -m kbs2.runner run E1` (proposed), `E8` (generative rivals), `E2` (naive baseline), `E2t`, `E2z`, `E2s` |
 | Table 7, Figure 3 | `python -m kbs2.grid_table7 --seven` | `cs3j_runner.py` on the grid regimes listed in `kbs2/protocol.py` (`TABLE7_GRID_CELLS`), seeds 42-51 |
 | Table 8 (fallback and label check) | `saved_kbs2/analysis/E1`, `V2b`, `V2c` | `python -m kbs2.runner run E1`, then `python -m kbs2.audit` |
 | Table A4 (significance) | `python -m kbs2.table6_stats` | — |
+| Table A5 (class counts) | `python -m kbs2.tables_existing` (needs the data caches that the first case-study run writes to `./data/casestudy_cache/`) | — |
 | Table A6 (training time) | `gen_seconds`, `clf_seconds` in the `runs.csv` files of Table 6 | — |
 | Table A7, Figure A4 (class-wise) | `python -m kbs2.classwise` | — |
-| Sensitivity (Reviewer 1, comment 5) | `python -m kbs2.se_analysis` | `python -m kbs2.runner run SE` |
+| Figure A5 (case-study samples) | — | `python -m kbs2.runner run E1` and `E8` (they save the synthetic sets), then `python -m kbs2.sample_figure` |
+| Table A8 (sensitivity) | `python -m kbs2.se_analysis`, then `python -m kbs2.se_table` | `python -m kbs2.runner run SE` and `SE2` |
 
 Every run uses the seeds stated in the paper (42-51 for the case studies, 42-56 for the ablation); the
 downstream classifier is initialised with seed 42 as in the submitted protocol (`kbs2/protocol.py`,

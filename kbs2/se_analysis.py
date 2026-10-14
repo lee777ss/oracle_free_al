@@ -9,7 +9,10 @@ arm W), one setting changed at a time from the submitted configuration:
     gate threshold tau          0.5, 0.7, 0.8, 0.9   (submitted 0.6)   all three datasets
     over-production factor      2, 5, 20             (submitted 10)    Fashion-MNIST
     images per class per cycle  10, 40               (submitted 20)    Fashion-MNIST
-tau 0.5 is E1b's arm W (already run); the other settings are SE. The reference for every comparison is E1,
+tau 0.5 is E1b's arm W (already run); the other settings are SE.
+Added 13 Oct, before any SE2 run (authors, R1.5 option b): experiment SE2 halves and doubles the generator
+loss coefficients on Fashion-MNIST, one at a time: lambda_cls 0.1, 0.4 (submitted 0.2) and lambda_anchor 0.5,
+2.0 (submitted 1.0); same analysis. The reference for every comparison is E1,
 the reproduced Table 6 rows (tau 0.6, pool factor 10, 20 per cycle).
 
 Analysis. Primary outcome macro-F2. For each dataset, parameter and value: the change from the submitted
@@ -34,7 +37,7 @@ from kbs2.analysis import hodges_lehmann, holm, wilcoxon_p  # noqa: E402
 
 OUT = os.path.join(ROOT, "saved_kbs2", "analysis", "SE")
 METRICS = ["macro_recall", "gmean", "macro_f2", "macro_specificity"]
-SUBMITTED = {"tau": 0.6, "pool_factor": 10, "samples_per_cycle": 20}
+SUBMITTED = {"tau": 0.6, "pool_factor": 10, "samples_per_cycle": 20, "lambda_cls": 0.2, "lambda_anchor": 1.0}
 
 
 def _runs(exp: str) -> pd.DataFrame:
@@ -51,7 +54,14 @@ def settings() -> pd.DataFrame:
     kind = se["tag"].str.extract(r"^(tau|pf|spc)(.+)$")
     se["param"] = kind[0].map({"tau": "tau", "pf": "pool_factor", "spc": "samples_per_cycle"})
     se["value"] = kind[1].astype(float)
-    return pd.concat([ref, t05, se], ignore_index=True)
+    parts = [ref, t05, se]
+    if os.path.exists(os.path.join(ROOT, "saved_kbs2", "SE2", "runs.csv")):
+        se2 = _runs("SE2").copy()
+        kind = se2["tag"].str.extract(r"^(lc|la)(.+)$")
+        se2["param"] = kind[0].map({"lc": "lambda_cls", "la": "lambda_anchor"})
+        se2["value"] = kind[1].astype(float)
+        parts.append(se2)
+    return pd.concat(parts, ignore_index=True)
 
 
 def main() -> None:

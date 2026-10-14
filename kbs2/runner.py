@@ -47,12 +47,14 @@ from kbs2 import protocol as P  # noqa: E402
 
 OUT = os.path.join(ROOT, "saved_kbs2")
 # E3 moved before E7 on 11 Oct (authors: R3.7 next; E7 not scheduled).
-SEQUENCE = ["P0", "E1", "E1b", "E2", "E2u", "E8", "E2w", "E2p", "E2q", "E2r", "E2s", "E2t", "E2v", "E2x", "E2y", "E2z", "E3", "AB", "E7", "SE", "E4"]
+SEQUENCE = ["P0", "E1", "E1b", "E2", "E2u", "E8", "E2w", "E2p", "E2q", "E2r", "E2s", "E2t", "E2v", "E2x", "E2y", "E2z", "E3", "AB", "E7", "SE", "SE2", "E4"]
 # SE (R1.5, authors 13 Oct): settings fixed before any SE run; the submitted values are tau 0.6, pool
 # factor 10 and 20 images per class per cycle. tau 0.5 comes from E1b (arm W).
 SE_TAUS = (0.7, 0.8, 0.9)
 SE_POOL_FACTORS = (2, 5, 20)
 SE_PER_CYCLE = (10, 40)
+SE2_LAMBDA_CLS = (0.1, 0.4)        # submitted 0.2
+SE2_LAMBDA_ANCHOR = (0.5, 2.0)     # submitted 1.0
 GATED = {"E1", "E2", "E8", "E3"}   # experiments containing reproduction checks
 
 
@@ -79,6 +81,7 @@ class Job:
     cotrain: Optional[bool] = None     # AB: generator/critic co-training inside the loop
     pool_factor: Optional[int] = None  # SE: candidate over-production factor (None = submitted 10)
     spc: Optional[int] = None          # SE: images admitted per class per cycle (None = submitted 20)
+    params: Optional[Dict[str, float]] = None  # SE2: loss coefficients set on the method (None = submitted)
 
     @property
     def name(self) -> str:
@@ -244,6 +247,15 @@ def jobs_for(exp: str) -> List[Job]:
         for n in SE_PER_CYCLE:
             for s in P.SEEDS:
                 jobs.append(Job("SE", P.PROPOSED, rid, ds, r, s, ["W"], tag=f"spc{n}", spc=n))
+    elif exp == "SE2":
+        # Sensitivity to the generator loss coefficients (R1.5; authors 13 Oct, option b): lambda_cls (submitted
+        # 0.2) and lambda_anchor (submitted 1.0) halved and doubled, one at a time, on Fashion-MNIST, seeds 42-51,
+        # classifier seed 42 (Table 6 protocol). Reference: E1. Analysis: kbs2/se_analysis.py.
+        ds, rid, r = next(a for a in anchors if a[0] == "fashion_mnist")
+        for name, short, values in (("lambda_cls", "lc", SE2_LAMBDA_CLS), ("lambda_anchor", "la", SE2_LAMBDA_ANCHOR)):
+            for v in values:
+                for s in P.SEEDS:
+                    jobs.append(Job("SE2", P.PROPOSED, rid, ds, r, s, ["W"], tag=f"{short}{v:g}", params={name: v}))
     else:
         raise ValueError(f"no jobs for {exp}")
     return jobs
@@ -383,6 +395,10 @@ def generate(job: Job, D: dict, device: str) -> dict:
         method.pool_factor = int(job.pool_factor)
     if job.spc is not None:
         method.samples_per_cycle = int(job.spc)
+    for k, v in (job.params or {}).items():   # SE2: one loss coefficient changed from the submitted value
+        if not hasattr(method, k):
+            raise SystemExit(f"{job.name}: method has no attribute {k}")
+        setattr(method, k, float(v))
     method.fit(Xtr, ytr)
     targets = balance_targets_ratio(ytr, job.ratio)
     X_syn, y_syn = method.synthesize(targets)
@@ -397,13 +413,15 @@ def generate(job: Job, D: dict, device: str) -> dict:
         rec["tau"] = float(method.min_confidence)
         rec["pool_factor"] = int(getattr(method, "pool_factor", 0))
         rec["samples_per_cycle"] = int(getattr(method, "samples_per_cycle", 0))
+        rec["lambda_cls"] = float(getattr(method, "lambda_cls", float("nan")))
+        rec["lambda_anchor"] = float(getattr(method, "lambda_anchor", float("nan")))
         if hasattr(method, "admitted_metadata"):
             rec["admitted_meta"] = method.admitted_metadata(method._deficits(targets))
     if job.exp == "AB":
         rec["candidates"] = method.candidate_arrays()
         rec["timings"] = dict(method.timings)
         rec["selection_mode"], rec["cotrain_g"] = method.selection_mode, method.cotrain_g
-    path = _synth_path(job.exp, job.method + (f"_{job.tag}" if job.exp in ("AB", "SE") else ""), job.regime, job.seed)
+    path = _synth_path(job.exp, job.method + (f"_{job.tag}" if job.exp in ("AB", "SE", "SE2") else ""), job.regime, job.seed)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     torch.save(rec, path)
     if getattr(method, "candidate_store", None):
@@ -495,6 +513,8 @@ def downstream(job: Job, arm: str, D: dict, S: dict, device: str) -> dict:
            "trainset_sha": _sha(X_aug), "init_weights_sha": init_sha}
     if job.exp == "SE":
         row.update(pool_factor=S.get("pool_factor"), samples_per_cycle=S.get("samples_per_cycle"))
+    if job.exp == "SE2":
+        row.update(lambda_cls=S.get("lambda_cls"), lambda_anchor=S.get("lambda_anchor"))
     return row
 
 
@@ -555,7 +575,7 @@ def status() -> None:
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("command", choices=["list", "run", "status"])
-    ap.add_argument("exp", nargs="?", choices=["E1", "E1b", "E2", "E2u", "E8", "E2w", "E2p", "E2q", "E2r", "E2s", "E2t", "E2v", "E2x", "E2y", "E2z", "E7", "E3", "AB", "SE"])
+    ap.add_argument("exp", nargs="?", choices=["E1", "E1b", "E2", "E2u", "E8", "E2w", "E2p", "E2q", "E2r", "E2s", "E2t", "E2v", "E2x", "E2y", "E2z", "E7", "E3", "AB", "SE", "SE2"])
     a = ap.parse_args(argv)
     if a.command == "status":
         status()

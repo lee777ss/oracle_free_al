@@ -13,12 +13,18 @@ import pandas as pd
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "saved_kbs2", "analysis", "SE", "se_table.csv")
 TEX = os.path.join(ROOT, "Journal_paper_02_kbs_revise2", "src", "generated", "rev2_sensitivity.tex")
-os.makedirs(os.path.dirname(TEX), exist_ok=True)  # public release: create the output folder
 DATASETS = [("R1_confusable", "Fashion-MNIST"), ("C2_cifar_paper", "CIFAR-10"), ("S2_stl_mod", "STL-10")]
 PARAMS = [("tau", r"Gate threshold $\tau$", "{:.1f}"), ("pool_factor", r"Over-production factor $R$", "{:.0f}"),
           ("samples_per_cycle", r"Admitted per class per cycle $B$", "{:.0f}"),
           ("lambda_cls", r"Classifier weight $\lambda_{\text{cls}}$", "{:.1f}"),
           ("lambda_anchor", r"Anchor weight $\lambda_{\text{anchor}}$", "{:.1f}")]
+# 17 Oct 2026 (authors: larger tables): each setting name on the first one or two rows of its block,
+# so the table fits the text width at 10 pt without wrapped (stretched) cells; @ = value of Table A3
+LABEL_LINES = {"tau": (r"Gate threshold $\tau$ (@)", None),
+               "pool_factor": ("Over-production", r"factor $R$ (@)"),
+               "samples_per_cycle": ("Admitted per class", r"per cycle $B$ (@)"),
+               "lambda_cls": ("Classifier weight", r"$\lambda_{\text{cls}}$ (@)"),
+               "lambda_anchor": ("Anchor weight", r"$\lambda_{\text{anchor}}$ (@)")}
 
 
 def _p(x: float) -> str:
@@ -39,25 +45,30 @@ def main() -> None:
              r"Table~\ref{tbl:hyperparams} (first row of each dataset). Change: Hodges--Lehmann estimate of the paired "
              r"change in macro-$F2$ with its exact 95\% confidence interval; $p$: two-sided Wilcoxon signed-rank test "
              r"paired by seed, Holm-adjusted over the values of a setting on a dataset.}}",
-             r"\label{tbl:sensitivity}", r"\resizebox{\linewidth}{!}{", r"\begin{tabular}{lllccc}", r"\toprule",
-             r"\rev{Dataset} & \rev{Setting} & \rev{Value} & \rev{Macro-$F2$} & \rev{Change [95\% CI]} & "
+             # 17 Oct 2026 (authors: larger tables): 10 pt, dataset as a row above each block, settings wrap
+             r"\label{tbl:sensitivity}", r"\footnotesize\setlength{\tabcolsep}{4pt}", r"\begin{tabular}{llccc}",
+             r"\toprule",
+             r"\rev{Setting} & \rev{Value} & \rev{Macro-$F2$} & \rev{Change [95\% CI]} & "
              r"\rev{Holm $p$} \\", r"\midrule"]
     for b, (rid, name) in enumerate(DATASETS):
         g = d[d["regime"] == rid]
         ref = g.iloc[0]
-        lines.append(rf"\rev{{{name}}} & \rev{{As in Table~\ref{{tbl:hyperparams}}}} & & "
+        lines.append(rf"\multicolumn{{5}}{{l}}{{\rev{{\textit{{{name}}}}}}} \\")
+        lines.append(rf"\rev{{As in Table~\ref{{tbl:hyperparams}}}} & & "
                      rf"\rev{{${ref['macro_f2_ref_mean']:.3f} \pm {ref['macro_f2_ref_sd']:.3f}$}} & & \\")
         for param, label, fmt in PARAMS:
             p = g[g["param"] == param].sort_values("value")
             for i, (_, r) in enumerate(p.iterrows()):
                 sub = fmt.format(r["submitted"])
-                lab = rf"\rev{{{label} ({sub})}}" if i == 0 else ""
-                lines.append(rf" & {lab} & \rev{{{fmt.format(r['value'])}}} & "
+                first, second = LABEL_LINES[param]
+                text = first if i == 0 else (second if i == 1 and second else "")
+                lab = r"\rev{" + text.replace("@", sub) + "}" if text else ""
+                lines.append(rf"{lab} & \rev{{{fmt.format(r['value'])}}} & "
                              rf"\rev{{${r['macro_f2_mean']:.3f} \pm {r['macro_f2_sd']:.3f}$}} & "
                              rf"\rev{{${_s(r['hl_f2'])}$ [${_s(r['ci_low'])}$, ${_s(r['ci_high'])}$]}} & "
                              rf"\rev{{{_p(r['p_holm'])}}} \\")
         lines.append(r"\midrule" if b < len(DATASETS) - 1 else r"\bottomrule")
-    lines += [r"\end{tabular}}", r"\end{table}"]
+    lines += [r"\end{tabular}", r"\end{table}"]
     os.makedirs(os.path.dirname(TEX), exist_ok=True)
     with open(TEX, "w", encoding="utf-8", newline="\n") as fh:
         fh.write("\n".join(lines) + "\n")

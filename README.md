@@ -53,6 +53,7 @@ marked *re-run* repeat the experiment (GPU).
 | Figure A1 | `python -m kbs2.ablation_figure` | as Table 3, panel A |
 | Figure 2 (ablation samples) | — | as Table 3, panel A (the notebook writes the sample dumps to `saved/`), then `python -m kbs2.ablation_samples` |
 | Table 6 | rows in `saved_casestudy/cs3j_*_reduced8.csv` (seven submitted methods) and `saved_kbs2/E2t`, `E2z`, `E2s` (simple remedies) | `python -m kbs2.runner run E1` (proposed), `E8` (generative rivals), `E2` (naive baseline), `E2t`, `E2z`, `E2s` |
+| Figure A3 (the ten seeds behind Table 6) | `python -m kbs2.figure_a3` (same rows as Table 6; checks every mean against `saved_kbs2/analysis/E4_table6/table6_desc.csv`) | as Table 6 |
 | Table 7, Figure 3 | `python -m kbs2.grid_table7 --seven` | `cs3j_runner.py` on the grid regimes listed in `kbs2/protocol.py` (`TABLE7_GRID_CELLS`), seeds 42-51 |
 | Table 8 (fallback and label check) | `saved_kbs2/analysis/E1`, `V2b`, `V2c` | `python -m kbs2.runner run E1`, then `python -m kbs2.audit` |
 | Table A4 (significance) | `python -m kbs2.table6_stats` | — |

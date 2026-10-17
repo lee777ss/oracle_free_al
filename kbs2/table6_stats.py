@@ -35,7 +35,6 @@ from kbs2.analysis import ALPHA, compare_block, holm, kbs2_rows, per_seed, submi
 
 OUT = os.path.join(ROOT, "saved_kbs2", "analysis", "E4_table6")
 TEX = os.path.join(ROOT, "Journal_paper_02_kbs_revise2", "src", "generated", "rev2_significance.tex")
-os.makedirs(os.path.dirname(TEX), exist_ok=True)  # public release: create the output folder
 DS_NAME = {"fashion_mnist": "Fashion-MNIST", "cifar10": "CIFAR-10", "stl10": "STL-10"}
 
 
@@ -74,20 +73,22 @@ def latex(c: pd.DataFrame, f: pd.DataFrame) -> str:
              r"Holm over the nine comparisons of a dataset. Difference: proposed minus the other method; HL: "
              r"Hodges--Lehmann estimate of the paired difference with its exact 95\% confidence interval; $r$: "
              r"matched-pairs rank-biserial correlation. The Friedman test is over the ten methods.}}",
-             r"\label{tbl:significance}", r"\resizebox{\linewidth}{!}{", r"\begin{tabular}{llccccc}", r"\toprule",
-             r"\rev{Dataset} & \rev{Competing method} & \rev{Difference} & \rev{HL [95\% CI]} & "
+             # 17 Oct 2026 (authors: larger tables): 10 pt, dataset and Friedman test as a row above each block
+             r"\label{tbl:significance}", r"\footnotesize\setlength{\tabcolsep}{4pt}", r"\begin{tabular}{lcccccc}",
+             r"\toprule",
+             r"\rev{Competing method} & \rev{Difference} & \rev{HL [95\% CI]} & "
              r"\rev{Holm $p$} & \rev{$r$} & \rev{Sig.} \\", r"\midrule"]
     for k, (ds, g) in enumerate(c.groupby("block", sort=False)):
         fr = f[f["block"] == ds].iloc[0]
-        first = rf"\multirow{{{len(g)}}}{{*}}{{\shortstack[l]{{\rev{{{DS_NAME[ds]}}}\\ \rev{{{_chi(fr)}}}}}}}"
+        lines.append(rf"\multicolumn{{6}}{{l}}{{\rev{{\textit{{{DS_NAME[ds]}}}, Friedman {_chi(fr)}}}}} \\")
         for i, (_, r) in enumerate(g.iterrows()):
-            cells = [first if i == 0 else "", rf"\rev{{{r['label']}}}", rf"\rev{{${_s(r['mean_diff'])}$}}",
+            cells = [rf"\rev{{{r['label']}}}", rf"\rev{{${_s(r['mean_diff'])}$}}",
                      rf"\rev{{${_s(r['hl'])}$ [${_s(r['ci_low'])}$, ${_s(r['ci_high'])}$]}}",
                      rf"\rev{{{_p(r['p_holm'])}}}", rf"\rev{{${_s(r['r_rb'], 2)}$}}",
                      r"\rev{Yes}" if r["p_holm"] < ALPHA else r"\rev{No}"]
             lines.append(" & ".join(cells) + r" \\")
         lines.append(r"\midrule" if k < 2 else r"\bottomrule")
-    lines += [r"\end{tabular}}", r"\end{table}"]
+    lines += [r"\end{tabular}", r"\end{table}"]
     return "\n".join(lines) + "\n"
 REMEDIES = [  # (experiment, method in its runs.csv, tag, arm, name used here, label)
     ("E2t", "n01_class_weighted", "isqrt", "W", "n01_class_weighted_isqrt", "Class-weighted"),
